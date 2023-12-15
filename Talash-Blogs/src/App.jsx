@@ -20,17 +20,19 @@ const App = () => {
   ];
 
   return (
-    <div>
+    <div className='app'>
+      <div className='mask'>
+      <div>
       <Header/>
-      <main>
+      </div>
+      <main className='main'>
         {posts.map((post, index) => (
           <Post key={index} {...post} />
         ))}
       </main>
       <About/>
       <Order/>
-
-
+    </div>
     </div>
   );
 };

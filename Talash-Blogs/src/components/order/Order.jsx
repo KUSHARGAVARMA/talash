@@ -20,40 +20,43 @@ const Order=()=>{
     };
 
     return(
-        <div className="orders">
-        <h2> Order yours</h2>
-        <form onSubmit={handleSubmit}>
-            <label>
-                Name:
-                <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}>
-                </input>
-            </label>
-            <label>
-                Email:
-                <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}>
-                </input>
-            </label>
-            <label>
-                WhatsApp Number:
-                <input
-                name="number"
-                value={formData.number}
-                onChange={handleChange}>
-                </input>
-            </label>
-            <button type="submit">Submit</button>
+        
+        <section id="order">
+        
+        <form className="contact-form" onSubmit={handleSubmit}>
+      <label htmlFor="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Your Name"
+      />
 
+      <label htmlFor="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="Your Email"
+      />
 
-        </form>
-        </div>
+      <label htmlFor="whatsapp">WhatsApp Number</label>
+      <input
+        type="tel"
+        id="whatsapp"
+        name="whatsapp"
+        value={formData.whatsapp}
+        onChange={handleChange}
+        placeholder="Your WhatsApp Number"
+      />
+
+      <button type="submit">Submit</button>
+    </form>
+    </section>
     );
 };
 export default Order;

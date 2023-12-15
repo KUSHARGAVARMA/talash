@@ -1,7 +1,7 @@
 import React from "react";
 const About=()=>{
     return(
-        <div className="author">
+        <section id="author">
         <div className="profile-picture">
         <h3>Profile-Picture</h3>
         <profile-picture>
@@ -16,7 +16,7 @@ const About=()=>{
             </p>
 
         </div>
-        </div>
+        </section>
     );
 };
 export default About;
